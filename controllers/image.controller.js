@@ -31,7 +31,7 @@ export const getUserImages = async function (req, res) {
         return res.status(200).json({ success: true, images });
     } catch (error) {
         console.error("Error fetching images:", error);
-        return res.status(500).json({ success: false, message: "Server Error" });
+        return res.status(500).json({ success: false, message: error.message});
     }
 };
 export const getSingleImage = async function (req, res) {
